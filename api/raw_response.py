@@ -1,6 +1,5 @@
 import requests
 from requests import Response
-from typing import Callable, Tuple, Any, Dict
 
 
 ROOT_URL = 'https://antcat.org/'
@@ -23,7 +22,7 @@ STARTS_AT = '?starts_at='
 
 
 def requestor(func):
-    def maker(*args, **kwargs) -> (requests.Response, bool):
+    def maker(*args, **kwargs) -> (Response, bool):
         response = requests.get(url=f"{ROOT_URL}{VERSION}{func(*args, **kwargs)}")
         found = True if response.status_code == 200 else False
         return response, found
