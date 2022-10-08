@@ -1,5 +1,5 @@
 from api.models import Citation
-from api import raw_response as urls
+from api import call as urls
 
 
 def get_citation(self, citation_id: int) -> Citation:
