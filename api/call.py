@@ -5,21 +5,48 @@ from requests import Response
 ROOT_URL = 'https://antcat.org/'
 VERSION = 'v1/'
 AUTHOR_NAMES = 'author_names/'
-AUTHORS = 'authors/'
-CITATIONS = 'citations/'
-HISTORY_ITEMS = 'history_items/'
-JOURNALS = 'journals/'
-NAMES = 'names/'
-PROTONYMS = 'protonyms/'
-PUBLISHERS = 'publishers/'
-REFERENCE_AUTHOR_NAMES = 'reference_author_names/'
-REFERENCE_DOCUMENTS = 'reference_documents/'
-REFERENCE_SECTIONS = 'reference_sections/'
-REFERENCES = 'references/'
-TAXA = 'taxa/'
-TAXA_SEARCH = 'taxa/search/'
-STARTS_AT = '?starts_at='
+AUTHOR_NAME_KEY = 'author_name'
 
+AUTHORS = 'authors/'
+AUTHORS_KEY = 'author'
+
+CITATIONS = 'citations/'
+CITATION_KEY = 'citation'
+
+HISTORY_ITEMS = 'history_items/'
+HISTORY_ITEM_KEY = 'history_item'
+
+JOURNALS = 'journals/'
+JOURNAL_KEY = 'journal'
+
+NAMES = 'names/'
+NAMES_KEY = 'name'
+
+PROTONYMS = 'protonyms/'
+PROTONYMS_KEY = 'protonym'
+
+PUBLISHERS = 'publishers/'
+PUBLISHERS_KEY = 'publisher'
+
+REFERENCE_AUTHOR_NAMES = 'reference_author_names/'
+REFERENCE_AUTHOR_NAMES_KEY = 'reference_author_name'
+
+REFERENCE_DOCUMENTS = 'reference_documents/'
+REFERENCE_DOCUMENTS_KEY = 'reference_document'
+
+REFERENCE_SECTIONS = 'reference_sections/'
+REFERENCE_SECTIONS_KEY = 'reference_section'
+
+REFERENCES = 'references/'
+REFERENCES_KEY = 'reference'
+
+TAXA = 'taxa/'
+TAXA_KEY = 'taxa'
+
+TAXA_SEARCH = 'taxa/search/'
+TAXA_SEARCH_KEY = 'taxa/search/'
+
+STARTS_AT = '?starts_at='
 
 def requestor(func):
     def maker(*args, **kwargs) -> (Response, bool):

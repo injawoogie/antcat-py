@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='antcat-py',
-    packages=find_packages(include=['antcat']),
+    packages=find_packages(include=['antcat', 'api']),
     version='0.1.0',
     description='AntCat.org API Access in Python.',
     author='Dick Makey',
